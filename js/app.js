@@ -43,4 +43,10 @@ console.log(slides)
       };
       buildSlideShow(imgArray);
       slideShow();
+
+      $(".a-class").click(function()
+                         {
+                            $(".a-class-main").slideToggle(800);
+                            return false;
+                         });
 });
