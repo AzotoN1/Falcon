@@ -1,5 +1,4 @@
 body {
-  // background-color: rgb(37, 37, 37);
   font-family: 'Raleway', sans-serif;
   background: url("../img/patterndark.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -15,13 +14,13 @@ body {
 }
 
 .clearfix {
-  clear:both;
+  clear: both;
   display: table;
   content: none;
 }
 
-.margin {
-  margin-top: 30px;
+[class*='col-'] {
+  float: left;
 }
 @for $i from 1 through 12 {
   .col-#{$i} {
@@ -29,23 +28,58 @@ body {
   }
 }
 
-[class*='col-'] {
-  float: left;
-}
-
 .container {
   max-width: 1080px;
   margin: 0 auto;
 }
-// .main-container {
-//   background-color: rgb(210, 210, 210);
-//   padding-top: 1px;
-// }
+
+.nav-list a {
+  text-decoration: none;
+}
+
+.sticky {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.main-header-nav {
+  transition: background-color 1s, font-weight 1s, color 1s, display 5s;
+}
+
+.scroll {
+  width: 100%;
+  height: 1px;
+}
+
+.nav-background {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(110,110,100, 0.5);
+  font-weight: bold;
+  box-shadow: 1px 1px 1px #222222;
+  color: rgb(210, 210, 210);
+  padding-left: -13px;
+
+  a {
+    color: rgb(210, 210, 210);
+  }
+}
+
+.nav-background-hidden {
+  background-color: transparent;
+  color: rgb(210, 210, 210);
+
+  a {
+    color: rgb(210, 210, 210);
+  }
+}
 
 .header-bar {
   width: 100%;
-  height: 40px;
-  position: fixed;
+  height: 30px;
 }
 
 .stripe-left {
@@ -73,6 +107,7 @@ body {
 .nav-list {
   display: flex;
   justify-content: center;
+  margin-right: 25px;
 
   li {
     padding-left: 10px;
@@ -81,7 +116,6 @@ body {
     margin-top: 7px;
     list-style: none;
     font-size: 15px;
-    color: rgb(236, 236, 236);
     text-transform: uppercase;
   }
 }
@@ -101,8 +135,11 @@ body {
 }
 
 .slider-header {
-  margin-top: 100px;
+  margin-top: 200px;
+  font-size: 50px;
   display: flex;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
   justify-content: center;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(224, 167, 18)), to(rgb(183, 124, 0)));
   -webkit-background-clip: text;
@@ -111,14 +148,54 @@ body {
 
 .sliders {
   max-width: 100%;
-  height: 200px;
-  background-color: rgb(210, 210, 210);
+  height: 500px;
+  background-color: transparent;
   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
   overflow: hidden;
-  border: 1px solid rgb(210, 210, 210);
   margin-bottom: 50px;
+  position: relative;
+}
+
+.slider-photo {
+  position: absolute;
+  width: 75%;
+  height: 500px;
+  margin-left: 100px;
+}
+
+.icon-left-open-1 {
+  position: absolute;
+  z-index: 9;
+  padding-top: 180px;
+  color: rgb(233, 233, 233);
+  transition: background-color 0.5s, color 0.5s;
+
+  &:hover {
+    height: 100%;
+    width: 60px;
+    background-color: transparent;
+    color: rgb(224, 167, 18);
+  }
+}
+
+.icon-right-open-1 {
+  position: absolute;
+  z-index: 9;
+  left: 95%;
+  padding-top: 180px;
+  color: rgb(233, 233, 233);
+  transition: background-color 0.5s, color 0.5s;
+
+  &:hover {
+    height: 100%;
+    width: 60px;
+    background-color: transparent;
+    color: rgb(224, 167, 18);
+  }
+}
+
+#sport {
+  margin-top: 30px;
 }
 
 .slider-bar a {
@@ -174,7 +251,10 @@ body {
   height: 25px;
 }
 
-.a-class {
+.a-class,
+.a-class-elegance,
+.a-class-plus,
+.a-class-supercar {
   width: 100%;
   height: 50px;
   background: rgb(224, 167, 18);
@@ -199,30 +279,72 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.a-class-main {
+.a-class-main,
+.a-class-main-elegance,
+.a-class-main-plus,
+.a-class-main-supercar {
   display: none;
   max-width: 100%;
-  height: 663px;
+  height: 700px;
   background: rgb(245, 245, 245);
   background: linear-gradient(rgb(245, 245, 245), rgb(179, 179, 179));
-  box-shadow: 0 1px 5px #111111;
-  border-radius: 0px 0px 5px 5px;
+  // box-shadow: 0 1px 5px #111111;
+  border-radius: 0 0 5px 5px;
+}
+
+.container-for-line {
+  width: 100%;
+  height: 40px;
+  display: flex;
 }
 
 .line-between {
   border-bottom: 1px solid black;
-  width: 300px;
-  height: 2px;
+  width: 100%;
+  height: 20px;
   margin-left: auto;
-  margin-right: 250px;
+  display: flex;
+  justify-content: center;
+}
 
-
+.image {
+  display: block;
+  opacity: 1;
+  transition: opacity 1s;
+  backface-visibility: hidden;
+  width: 300px;
+  height: 200px;
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.75);
 }
 
 .image-section {
   width: 300px;
   height: 200px;
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.75);
+  position: relative;
+  float: left;
+}
+
+.price-banner {
+  position: absolute;
+  opacity: 0;
+  top: 75%;
+  left: 35%;
+  width: 300px;
+  height: 50px;
+  font-family: 'Rubik', sans-serif;
+  text-shadow: 2px 0 black;
+  color: rgb(224, 167, 18);
+  font-size: 30px;
+  transition: opacity 1s;
+}
+
+.image-section:hover .image {
+  opacity: 0.6;
+}
+
+.image-section:hover .price-banner {
+  opacity: 1;
 }
 
 .car-list-title {
@@ -232,7 +354,7 @@ body {
   margin-left: 20px;
   font-family: 'Rubik', sans-serif;
   font-size: 40px;
-  color: rgb(80, 80, 80)
+  color: rgb(80, 80, 80);
 }
 
 .icon {
@@ -267,6 +389,125 @@ body {
 
 .car-list-description {
   font-family: 'Poppins', sans-serif;
+}
+
+.background-section-oferta {
+  background: rgb(179, 179, 179);
+
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid  rgb(183, 124, 0);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+#elegance,
+#sport-plus,
+#supercar {
+  margin-top: 100px;
+}
+
+.contact-box {
+  width: 100%;
+  min-height: 700px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.form-box {
+  color: white;
+  display: inline-block;
+  width: 100px;
+  margin-top: 40px;
+
+  input,
+  textarea {
+    width: 400px;
+    margin: 10px 10px 10px 50px;
+    font-size: 16px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 6px;
+    box-shadow: 0 0 5px 0 rgba(42,42,42,.79);
+    background-color: #f5f5f5;
+    color: #949494;
+    border-color: #e6e6e6;
+    font-weight: normal;
+    font-style: italic;
+    font-family: sans-serif;
+  }
+
+  .btn-submit {
+    width: 100px;
+    color: rgba(42,42,42,.90);
+    font-weight: bold;
+    background: linear-gradient(rgb(224, 167, 18), rgb(183, 124, 0));
+    border-color: rgb(183, 124, 0);
+    font-style: normal;
+    margin-left: 200px;
+  }
+}
+
+.find-contact-us {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-us-now {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(224, 167, 18)), to(rgb(183, 124, 0)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  margin-left: 50px;
+  margin-right: 150px;
+  margin-top: 50px;
+}
+
+.find-contact-us {
+  dispaly: flex;
+  justify-content: space-around;
+}
+
+.find-us {
+  display: flex;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(224, 167, 18)), to(rgb(183, 124, 0)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  margin-right: 150px;
+  display: block;
+  margin-top: 50px;
+}
+
+.form-box-description {
+  display: flex;
+  margin-left: 50px;
+  width: 200px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(224, 167, 18)), to(rgb(183, 124, 0)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.map-direction {
+  position: absolute;
+  top: 17.8%;
+  margin-left: 400px;
+  margin-top: 30px;
+  border: 5px solid rgb(224, 167, 18);
+}
+
+#spnPhoneStatus {
+  margin-left: 50px;
+  display: flex;
+  width: 300px;
 }
 //////////////////////////////////////////////////////////////////////////////
 //All Media Scripts
@@ -320,13 +561,12 @@ body {
     margin-left: 50px;
   }
 }
-
 @media(max-width: 918px) {
   .icon {
     display: none;
   }
-  .car-list-title {
-  }
+
+  .car-list-title {}
 }
 //End Media
 ///////////////////////////////////////////////////////////////////////////

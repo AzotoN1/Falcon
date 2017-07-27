@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,26 +11,29 @@
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto+Mono|Rubik|Varela+Round" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="fontello1/css/fontello.css" />
   <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+
   <title>Falcon - Luxury Car Rent</title>
 </head>
+
 <body>
 
   <header class="main-header-nav">
 
-      <div class="header-bar">
-        <div class="stripe-left col-3"> </div>
-        <div class="stripe-right col-3"> </div>
-        <nav class="container">
+    <div class="header-bar">
+      <div class="stripe-left col-3"> </div>
+      <div class="stripe-right col-3"> </div>
+      <nav class="container">
         <ul class="nav-list">
-          <li>Strona Główna</li>
-          <li>Oferta</li>
-          <li>O Nas</li>
-          <li>Kontakt</li>
+          <li><a id="main" href="#">Strona Główna</a></li>
+          <li><a id="about" href="#">O Nas</a></li>
+          <li><a id="offer" href="#">Oferta</a></li>
+          <li><a id="contact" href="#">Kontakt</a></li>
         </ul>
       </nav>
 
     </div>
-    </header>
+  </header>
   <section>
     <div class="wallpaper-header">
       <div class="logo-header">
@@ -38,28 +42,34 @@
     </div>
     <main class="container">
 
-      <h1 class="slider-header">Najbardziej popularne</h1>
+      <h1 class="slider-header">BestSellers</h1>
       <div class="sliders">
-            <!-- <a href="">
-              <i class="icon-left-open-1"></i>
-            </a> -->
-            <div id="slider"></div>
-            <!-- <a href="">
-              <i class="icon-right-open-1"></i>
-            </a> -->
+        <i class="icon-left-open-1"></i>
+        <img src="./img/m3.png" alt="sd" class="slider-photo" />
+        <img src="./img/amg.png" alt="sd" class="slider-photo" />
+        <img src="./img/tesla.png" alt="sd" class="slider-photo" />
+        <img src="./img/aston.png" alt="sd" class="slider-photo" />
+        <i class="icon-right-open-1"></i>
       </div>
   </section>
-  <section>
-      <div class="car-list-default container">
+  <div class="scroll offer-scroll"></div>
+  <h2 class="slider-header">Oferta</h2>
+  <div class="background-section-oferta container">
 
-          <div class="a-class">
-            <span class="banner-text">Sport</span>
+  <section id="sport">
+    <div class="car-list-default container">
+
+      <div class="a-class">
+        <span class="banner-text">Sport</span>
+      </div>
+      <div class="a-class-main">
+        <div class="m3-section clearfix">
+          <div class="image-section">
+            <img src="img/m3.jpg" alt="BMW M3" class="image col-2" />
+            <div class="price-banner">3000$</div>
           </div>
-          <div class="a-class-main">
-          <div class="m3-section clearfix">
-          <img src="img/m3.jpg" alt="Bmw M3" class="image-section col-2"/>
-            <span class="car-list-title col-8">BMW M3</span>
-            <span class="car-list-icons col-8">
+          <span class="car-list-title col-8">BMW M3</span>
+          <span class="car-list-icons col-8">
               <img class="icon icon-engine" src="img/icon/silnik.png"/>
               <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
               <img class="icon icon-speed" src="img/icon/predkosc.png" />
@@ -68,23 +78,26 @@
               <img class="icon icon-gear" src="img/icon/skrzynia.png" />
               <img class="icon icon-seats" src="img/icon/miejsca.png" />
             </span>
-            <span class="car-list-description col-8">
+          <span class="car-list-description col-8">
               <span class="icon icon-description">3 l</span>
-              <span class="icon icon-description">4,3s</span>
-              <span class="icon icon-description">280km/h</span>
-              <span class="icon icon-description">450km</span>
-              <span class="icon icon-description">Benzyna</span>
-              <span class="icon icon-description">Auto</span>
-              <span class="icon icon-description">5</span>
-            </span>
+          <span class="icon icon-description">4.3s</span>
+          <span class="icon icon-description">280km/h</span>
+          <span class="icon icon-description">450km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">5</span>
+          </span>
+        </div>
+        <div class="container-for-line">
+          <div class="line-between"> </div>
+        </div>
+        <div class="tt-section clearfix margin">
+          <div class="image-section">
+            <img src="img/audi_tt.jpg" alt="AUDI TT" class="image col-2" />
+            <div class="price-banner">3000$</div>
           </div>
-          <div class="container-for-line">
-            <div class="line-between"></div>
-          </div>
-          <div class="tt-section clearfix margin">
-          <img src="img/audi_tt.jpg" alt="Audi TT" class="image-section col-2"/>
-            <span class="car-list-title col-8">AUDI TT</span>
-            <span class="car-list-icons col-8">
+          <span class="car-list-title col-8">AUDI TT</span>
+          <span class="car-list-icons col-8">
               <img class="icon icon-engine" src="img/icon/silnik.png">
               <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
               <img class="icon icon-speed" src="img/icon/predkosc.png" />
@@ -93,20 +106,26 @@
               <img class="icon icon-gear" src="img/icon/skrzynia.png" />
               <img class="icon icon-seats" src="img/icon/miejsca.png" />
             </span>
-            <span class="car-list-description col-8">
-              <span class="icon icon-description">2,5l</span>
-              <span class="icon icon-description">4,3s</span>
-              <span class="icon icon-description">250km/h</span>
-              <span class="icon icon-description">340km</span>
-              <span class="icon icon-description">Benzyna</span>
-              <span class="icon icon-description">Auto</span>
-              <span class="icon icon-description">4</span>
-            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">2.5l</span>
+          <span class="icon icon-description">4.3s</span>
+          <span class="icon icon-description">250km/h</span>
+          <span class="icon icon-description">340km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">4</span>
+          </span>
+        </div>
+        <div class="container-for-line">
+          <div class="line-between"> </div>
+        </div>
+        <div class="amg-section clearfix margin">
+          <div class="image-section">
+            <img src="img/m_amg.jpg" alt="AUDI R8" class="image col-2" />
+            <div class="price-banner">3000$</div>
           </div>
-          <div class="amg-section clearfix margin">
-          <img src="img/m_amg.jpg" alt="Mercedes AMG" class="image-section col-2"/>
-            <span class="car-list-title col-8">MERCEDES AMG</span>
-            <span class="car-list-icons col-8">
+          <span class="car-list-title col-8">MERCEDES AMG</span>
+          <span class="car-list-icons col-8">
               <img class="icon icon-engine" src="img/icon/silnik.png">
               <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
               <img class="icon icon-speed" src="img/icon/predkosc.png" />
@@ -115,21 +134,320 @@
               <img class="icon icon-gear" src="img/icon/skrzynia.png" />
               <img class="icon icon-seats" src="img/icon/miejsca.png" />
             </span>
-            <span class="car-list-description col-8">
-              <span class="icon icon-description">4,7l</span>
-              <span class="icon icon-description">4,5s</span>
-              <span class="icon icon-description">250km/h</span>
-              <span class="icon icon-description">455km</span>
-              <span class="icon icon-description">Benzyna</span>
-              <span class="icon icon-description">Auto</span>
-              <span class="icon icon-description">4</span>
-            </span>
-          </div>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">4.7l</span>
+          <span class="icon icon-description">4.5s</span>
+          <span class="icon icon-description">250km/h</span>
+          <span class="icon icon-description">455km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">4</span>
+          </span>
         </div>
       </div>
+    </div>
   </section>
-    </main>
+  <div class="arrow-down"></div>
+  <section id="sport-plus">
+    <div class="car-list-default container">
 
-  <script src="js/app.js"> </script>
+      <div class="a-class-plus">
+        <span class="banner-text">Sport +</span>
+      </div>
+      <div class="a-class-main-plus">
+        <div class="m3-section clearfix">
+          <div class="image-section">
+            <img src="img/audi_r8.jpg" alt="AUDI R8" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">AUDI R8</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png"/>
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">5.2l</span>
+          <span class="icon icon-description">4.5s</span>
+          <span class="icon icon-description">316km/h</span>
+          <span class="icon icon-description">525km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">2</span>
+          </span>
+        </div>
+        <div class="container-for-line">
+          <div class="line-between"> </div>
+        </div>
+        <div class="tt-section clearfix">
+          <div class="image-section">
+            <img src="img/corvette.jpg" alt="Corvette C7 Stingray" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">Corvette C7 Stingray</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png">
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">6.2l</span>
+          <span class="icon icon-description">3.6s</span>
+          <span class="icon icon-description">330km/h</span>
+          <span class="icon icon-description">450km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">2</span>
+          </span>
+        </div>
+        <div class="container-for-line">
+          <div class="line-between"> </div>
+        </div>
+        <div class="amg-section clearfix">
+          <div class="image-section">
+            <img src="img/ferrari_f430.jpg" alt="Ferrari F430" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">Ferrari F430</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png">
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">4.3l</span>
+          <span class="icon icon-description">4.0s</span>
+          <span class="icon icon-description">315km/h</span>
+          <span class="icon icon-description">490km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">2</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="arrow-down"></div>
+  <section id="elegance">
+    <div class="car-list-default container">
+
+      <div class="a-class-elegance">
+        <span class="banner-text">Elegance</span>
+      </div>
+      <div class="a-class-main-elegance">
+        <div class="m3-section clearfix">
+          <div class="image-section">
+            <img src="img/i8.jpg" alt="BMW i8" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">BMW i8</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png"/>
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">1.5l</span>
+          <span class="icon icon-description">4.4s</span>
+          <span class="icon icon-description">250km/h</span>
+          <span class="icon icon-description">362km</span>
+          <span class="icon icon-description">Hybryda</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">4</span>
+          </span>
+        </div>
+        <div class="container-for-line">
+          <div class="line-between"> </div>
+        </div>
+        <div class="tt-section clearfix">
+          <div class="image-section">
+            <img src="img/tesla.jpg" alt="Tesla S 85" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">Tesla S 85</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png">
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">85kWh</span>
+          <span class="icon icon-description">5.6s</span>
+          <span class="icon icon-description">201km/h</span>
+          <span class="icon icon-description">367km</span>
+          <span class="icon icon-description">Elektryczny</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">5</span>
+          </span>
+        </div>
+        <div class="container-for-line">
+          <div class="line-between"> </div>
+        </div>
+        <div class="amg-section clearfix">
+          <div class="image-section">
+            <img src="img/amartin.jpg" alt="Aston Martin DB 9" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">Aston Martin DB9</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png">
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">6.0l</span>
+          <span class="icon icon-description">4.8s</span>
+          <span class="icon icon-description">306km/h</span>
+          <span class="icon icon-description">517km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">2</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="arrow-down"></div>
+  <section id="supercar">
+    <div class="car-list-default container">
+
+      <div class="a-class-supercar">
+        <span class="banner-text">Super Car</span>
+      </div>
+      <div class="a-class-main-supercar">
+        <div class="m3-section clearfix">
+          <div class="image-section">
+            <img src="img/mclaren.jpg" alt="McLaren 650S" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">McLaren 650S</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png"/>
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">3.8l</span>
+          <span class="icon icon-description">3s</span>
+          <span class="icon icon-description">333km/h</span>
+          <span class="icon icon-description">650km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">2</span>
+          </span>
+        </div>
+        <div class="container-for-line">
+          <div class="line-between"> </div>
+        </div>
+        <div class="tt-section clearfix">
+          <div class="image-section">
+            <img src="img/huracan.jpg" alt="Lamborghini Huracan" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">Lamborghini Huracan</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png">
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">V10</span>
+          <span class="icon icon-description">3.2s</span>
+          <span class="icon icon-description">325km/h</span>
+          <span class="icon icon-description">610km</span>
+          <span class="icon icon-description">Benzynay</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">2</span>
+          </span>
+        </div>
+        <div class="container-for-line">
+          <div class="line-between"> </div>
+        </div>
+        <div class="amg-section clearfix">
+          <div class="image-section">
+            <img src="img/italia.jpg" alt="Ferrari F458 Italia" class="image col-2" />
+            <div class="price-banner">3000$</div>
+          </div>
+          <span class="car-list-title col-8">Ferrari F458 Italia</span>
+          <span class="car-list-icons col-8">
+              <img class="icon icon-engine" src="img/icon/silnik.png">
+              <img class="icon icon-acceleration" src="img/icon/przyspieszenie.png" />
+              <img class="icon icon-speed" src="img/icon/predkosc.png" />
+              <img class="icon icon-power" src="img/icon/moc.png" />
+              <img class="icon icon-petrol" src="img/icon/paliwo.png" />
+              <img class="icon icon-gear" src="img/icon/skrzynia.png" />
+              <img class="icon icon-seats" src="img/icon/miejsca.png" />
+            </span>
+          <span class="car-list-description col-8">
+              <span class="icon icon-description">4.5l</span>
+          <span class="icon icon-description">3.0s</span>
+          <span class="icon icon-description">340km/h</span>
+          <span class="icon icon-description">570km</span>
+          <span class="icon icon-description">Benzyna</span>
+          <span class="icon icon-description">Auto</span>
+          <span class="icon icon-description">2</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="arrow-down"></div>
+  </div>
+  <section class="contact container">
+    <div class="scroll contact-scroll"></div>
+    <h3 class="slider-header contact-scroll">Kontakt</h3>
+    <div class="contact-box container">
+      <div class="find-contact-us">
+        <span class="contact-us-now">Napisz do Nas !</span>
+        <span class="find-us">Znajdź Nas !</span>
+      </div>
+      <form class="form-box container col-6">
+        <span class="form-box-description">Imię i Nazwisko</span><input type="text" name="FirstName" placeholder="np. Jan Brzechwa"><br>
+        <span class="form-box-description">E-mail</span><input type="email" name="Mail" placeholder="np. example@ex.mp"><br>
+        <span class="form-box-description">Numer Telefonu</span><input id="txtPhone" type="tel" name="Phone" placeholder="np. 000111222"><br>
+        <span id="spnPhoneStatus"></span></br>
+        ​<span class="form-box-description">Treśc</span><textarea id="txtArea" rows="5" placeholder="Wiadomośc"></textarea>
+        <input type="submit" value="Wyślij" class="btn-submit">
+      </form>
+      <iframe class="map-direction col-6" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d10142.270152427058!2d47.66577597873663!3d40.42734180650399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d40.4214778!2d47.6779216!4m0!5e0!3m2!1spl!2spl!4v1501163810656"
+        width="600" height="400" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+  </main>
+
+  <script src="js/app.js"></script>
 </body>
+
 </html>
