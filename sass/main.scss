@@ -1,6 +1,6 @@
 body {
-  font-family: 'Raleway', sans-serif;
-  background: url("../img/patterndark.jpg") no-repeat center center fixed;
+  font-family: 'Rubik', sans-serif;
+  background: url("https://i.imgur.com/rAVo9IA.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -32,6 +32,7 @@ body {
   max-width: 1080px;
   margin: 0 auto;
 }
+/////////////////////////////////////////////////////////////////
 
 .nav-list a {
   text-decoration: none;
@@ -51,7 +52,7 @@ body {
 
 .scroll {
   width: 100%;
-  height: 1px;
+  height: 10px;
 }
 
 .nav-background {
@@ -119,7 +120,7 @@ body {
     text-transform: uppercase;
   }
 }
-
+/////////////////////////////////////////////////////////////////
 .wallpaper-header {
   height: 600px;
   width: 100%;
@@ -133,9 +134,9 @@ body {
   max-width: 350px;
   height: 250px;
 }
-
+/////////////////////////////////////////////////////////////////
 .slider-header {
-  margin-top: 200px;
+  margin-top: 150px;
   font-size: 50px;
   display: flex;
   font-family: 'Rubik', sans-serif;
@@ -250,7 +251,25 @@ body {
   width: 50px;
   height: 25px;
 }
+/////////////////////////////////////////////////////////////////
+.about-us {
+  margin-top: 60px;
 
+  span {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(180, 180, 180);
+    text-align: justify;
+    text-transform: inherit;
+    line-height: 30px;
+
+    span {
+      color: rgb(224, 167, 18);
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////
 .a-class,
 .a-class-elegance,
 .a-class-plus,
@@ -279,13 +298,97 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+#filter {
+  width: 30%;
+  font-size: 16px;
+  height: 30px;
+  // padding: 12px 20px 12px 40px;
+  border: 3px solid rgb(130, 130, 130);
+  margin-bottom: 12px;
+  margin-top: 30px;
+  outline: none;
+  margin-left: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+#filter:focus {
+  outline: none;
+  display: flex;
+  justify-content: center;
+}
+
+#filter-count {
+  display: flex;
+  color: rgb(245, 245, 245);
+  margin-left: 460px;
+}
+
+.container-2 {
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.box {
+  display: flex;
+  margin-left: 280px;
+}
+
+.container-2 input#filter {
+  width: 300px;
+  height: 50px;
+  background: rgb(225, 225, 225);
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #262626;
+  padding-left: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #777777;
+  -webkit-transition: width 0.55s ease;
+  -moz-transition: width 0.55s ease;
+  -ms-transition: width 0.55s ease;
+  -o-transition: width 0.55s ease;
+  transition: width 0.55s ease;
+}
+
+.container-2 input#filter::-webkit-input-placeholder {
+  color: #65737e;
+}
+
+.container-2 input#filter:-moz-placeholder {
+  /* Firefox 18- */
+  color: #65737e;
+}
+
+.container-2 input#filter::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #65737e;
+}
+
+.container-2 input#filter:-ms-input-placeholder {
+  color: #65737e;
+}
+
+.container-2 .icon {
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
 .a-class-main,
 .a-class-main-elegance,
 .a-class-main-plus,
 .a-class-main-supercar {
   display: none;
   max-width: 100%;
-  height: 700px;
+  max-height: 700px;
   background: rgb(245, 245, 245);
   background: linear-gradient(rgb(245, 245, 245), rgb(179, 179, 179));
   // box-shadow: 0 1px 5px #111111;
@@ -323,6 +426,7 @@ body {
   box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.75);
   position: relative;
   float: left;
+  margin-bottom: 50px;
 }
 
 .price-banner {
@@ -392,30 +496,28 @@ body {
 }
 
 .background-section-oferta {
-  background: rgb(179, 179, 179);
-
+  // background: rgb(179, 179, 179);
 }
+
 .arrow-down {
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-
-  border-top: 20px solid  rgb(183, 124, 0);
-  margin-left: 0;
+  border-top: 20px solid rgb(183, 124, 0);
+  margin-left: 519px;
   margin-right: 0;
 }
-
 
 #elegance,
 #sport-plus,
 #supercar {
-  margin-top: 100px;
+  margin-top: 50px;
 }
-
+/////////////////////////////////////////////////////////////////
 .contact-box {
   width: 100%;
-  min-height: 700px;
+  min-height: 800px;
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -426,6 +528,7 @@ body {
   display: inline-block;
   width: 100px;
   margin-top: 40px;
+  resize: none;
 
   input,
   textarea {
@@ -442,6 +545,11 @@ body {
     font-weight: normal;
     font-style: italic;
     font-family: sans-serif;
+    resize: none;
+  }
+
+  #txtArea {
+    resize: none;
   }
 
   .btn-submit {
@@ -452,6 +560,7 @@ body {
     border-color: rgb(183, 124, 0);
     font-style: normal;
     margin-left: 200px;
+    margin-top: 20px;
   }
 }
 
@@ -498,9 +607,9 @@ body {
 
 .map-direction {
   position: absolute;
-  top: 17.8%;
+  top: 22.5%;
   margin-left: 400px;
-  margin-top: 30px;
+  margin-top: -15px;
   border: 5px solid rgb(224, 167, 18);
 }
 
@@ -508,6 +617,160 @@ body {
   margin-left: 50px;
   display: flex;
   width: 300px;
+}
+/////////////////////////////////////////////////////////////////
+/* Outer */
+.popup {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+}
+/* Inner */
+
+.popup-inner {
+  max-width: 700px;
+  width: 90%;
+  min-height: 400px;
+  max-height: 400px;
+  padding: 40px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 6px rgba(0,0,0,1);
+  border-radius: 3px;
+  background: rgb(245, 245, 245);
+  background: linear-gradient(rgba(245, 245, 245,0.9), rgba(179, 179, 179,0.9));
+
+  h2 {
+    margin-left: 280px;
+    margin-bottom: 25px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(224, 167, 18)), to(rgb(183, 124, 0)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  iframe {
+    margin-left: 70px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .snapchat {
+    background-image: url("../img/snap.png");
+    width: 260px;
+    height: 260px;
+    background-repeat: no-repeat;
+    margin-left: 200px;
+  }
+
+  #snap-name {
+    margin-left: 280px;
+    font-size: 20px;
+  }
+}
+/* Close Button */
+
+.popup-close {
+  width: 30px;
+  height: 26px;
+  padding-top: 4px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: ease 0.25s all;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  border-radius: 1000px;
+  background: rgba(0,0,0,0.8);
+  font-family: Arial, Sans-Serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100%;
+  color: #fff;
+}
+
+.popup-close:hover {
+  -webkit-transform: translate(50%, -50%) rotate(180deg);
+  transform: translate(50%, -50%) rotate(180deg);
+  background: rgba(0,0,0,1);
+  text-decoration: none;
+}
+
+.social-media-box {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 75px;
+  align-items: center;
+  margin-top: 75px;
+  font-size: 50px;
+
+  .icon-youtube-play {
+    color: rgb(204,24,30);
+  }
+
+  .icon-snapchat-ghost {
+    color: rgb(255, 252, 0);
+  }
+
+  .icon-twitter {
+    color: rgb(85, 172, 238);
+  }
+
+  .icon-facebook {
+    color: rgb(59, 89, 152);
+  }
+
+  .icon-instagram {
+    color: rgb(221, 75, 57);
+  }
+}
+
+#remain {
+  position: absolute;
+  margin-left: 340px;
+  font-size: 10px;
+  bottom: 28%;
+  font-family: 'Rubik', sans-serif;
+  color: rgb(224, 167, 18);
+}
+
+#remain-2 {
+  position: absolute;
+  margin-left: 365px;
+  font-size: 10px;
+  bottom: 28%;
+  font-family: 'Rubik', sans-serif;
+}
+/////////////////////////////////////////////////////////////////
+.footer {
+  width: 100%;
+  height: 40px;
+  margin-top: 820px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #949494;
+  padding-top: 40px;
+
+  span {
+    margin-left: 35%;
+    margin-bottom: 300px;
+
+    a img {
+      width: 50px;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
 }
 //////////////////////////////////////////////////////////////////////////////
 //All Media Scripts
@@ -565,8 +828,6 @@ body {
   .icon {
     display: none;
   }
-
-  .car-list-title {}
 }
 //End Media
 ///////////////////////////////////////////////////////////////////////////

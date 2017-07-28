@@ -7,15 +7,69 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "47a1f80457068fbeab69fdb83d7d0817",
+      "css": "youtube-play",
+      "code": 61802,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "1b1a592d33fa26c37926cbe840eb60b8",
+      "css": "snapchat-ghost",
+      "code": 62124,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "bc50457410acf467b8b5721240768742",
+      "css": "facebook",
+      "code": 62220,
+      "src": "entypo"
+    },
+    {
+      "uid": "b945f4ac2439565661e8e4878e35d379",
+      "css": "gplus",
+      "code": 62223,
+      "src": "entypo"
+    },
+    {
+      "uid": "d090355c31f497b61d676416c1fd39fb",
+      "css": "twitter",
+      "code": 62217,
+      "src": "entypo"
+    },
+    {
+      "uid": "11d74f891bce30f1bdf73d3259d59ed5",
+      "css": "user",
+      "code": 61537,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "a17986e457f3d85f26c9c240dfd6a4ba",
+      "css": "mail",
+      "code": 59392,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "9f7e588c66cfd6891f6f507cf6f6596b",
+      "css": "phone",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ecb97add13804c190456025e43ec003b",
+      "css": "keyboard",
+      "code": 61724,
+      "src": "fontawesome"
+    },
+    {
       "uid": "399ef63b1e23ab1b761dfbb5591fa4da",
       "css": "right-open-1",
-      "code": 59392,
+      "code": 59394,
       "src": "fontawesome"
     },
     {
       "uid": "d870630ff8f81e6de3958ecaeac532f2",
       "css": "left-open-1",
-      "code": 59393,
+      "code": 59395,
       "src": "fontawesome"
     },
     {
@@ -31,33 +85,9 @@
       "src": "mfglabs"
     },
     {
-      "uid": "ce1d525f3f31024c6a6b38f5e9a88953",
-      "css": "facebook-circled",
-      "code": 62221,
-      "src": "entypo"
-    },
-    {
-      "uid": "0419da6446cb4f31093e2022793571ca",
-      "css": "twitter-circled",
-      "code": 62218,
-      "src": "entypo"
-    },
-    {
-      "uid": "818a6c2a76c89800632c0335e9cdafee",
-      "css": "gplus-circled",
-      "code": 62224,
-      "src": "entypo"
-    },
-    {
-      "uid": "cab8b1ea47d71c77413157c592db2293",
-      "css": "snapchat",
-      "code": 62123,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "47a1f80457068fbeab69fdb83d7d0817",
-      "css": "youtube-play",
-      "code": 61802,
+      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
+      "css": "instagram",
+      "code": 61805,
       "src": "fontawesome"
     }
   ]
